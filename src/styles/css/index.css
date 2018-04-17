@@ -3,11 +3,31 @@ body {
   padding: 0;
   font-family: sans-serif; }
 
+/** FONTS */
+/** SCREEN SIZES */
 h1,
 h2 {
   font-family: "Questrial", sans-serif; }
 
 p {
   font-family: "Pragati Narrow", sans-serif; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.25fr;
+  grid-template-areas: "s m m m .";
+  grid-column-gap: 5vw; }
+
+.side {
+  grid-area: s; }
+
+.main {
+  grid-area: m; }
+
+section {
+  text-align: center; }
+
+section > img {
+  max-width: 90%; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,IAAK;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,WAAW,EAAE,UAAU;;ACHzB;EACG;EACD,WAAW,ECFC,uBAAuB;;ADKrC,CAAE;EACA,WAAW,ECLI,4BAA4B",
-"sources": ["../scss/_app.scss","../scss/_font.scss","../scss/_variables.scss"],
+"mappings": "AAAA,IAAK;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,WAAW,EAAE,UAAU;;ACHzB,YAAY;AAIZ,mBAAmB;ACJnB;EACG;EACD,WAAW,EDDC,uBAAuB;;ACIrC,CAAE;EACA,WAAW,EDJI,4BAA4B;;AEF7C,UAAW;EACT,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,sBAAsB;EAC7C,mBAAmB,EAAE,WAAW;EAChC,eAAe,EAAE,GAAG;;AAEtB,KAAM;EACJ,SAAS,EAAE,CAAC;;AAEd,KAAM;EACJ,SAAS,EAAE,CAAC;;ACVd,OAAQ;EACN,UAAU,EAAE,MAAM;;AAEpB,aAAc;EACZ,SAAS,EAAE,GAAG",
+"sources": ["../scss/_app.scss","../scss/_variables.scss","../scss/_font.scss","../scss/_layout.scss","../scss/image.scss"],
 "names": [],
 "file": "index.css"
 }

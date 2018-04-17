@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.25fr;
+  grid-template-areas: "s m m m .";
+  grid-column-gap: 5vw;
+}
+.side {
+  grid-area: s;
+}
+.main {
+  grid-area: m;
+}
