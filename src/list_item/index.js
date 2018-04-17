@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Item from "./item";
 
 class ListItem extends Component {
   constructor(props) {
@@ -12,8 +13,8 @@ class ListItem extends Component {
 
   createItems(item) {
     return (
-      <li onClick={() => this.showArticle(item.id)} key={item.id}>
-        {item.title}
+      <li key={item.id} onClick={() => this.showArticle(item.id)}>
+        <Item title={item.title} urlToImage={item.urlToImage} />
       </li>
     );
   }
