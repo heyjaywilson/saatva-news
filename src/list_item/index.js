@@ -21,7 +21,7 @@ class ListItem extends Component {
   render() {
     const articles = this.props.stories;
     var listArticles = articles.map(this.createItems);
-    return <ul>{listArticles}</ul>;
+    return <ul className="side">{listArticles}</ul>;
   }
 }
 

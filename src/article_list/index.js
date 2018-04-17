@@ -44,7 +44,7 @@ class ArticleList extends Component {
 
   renderPosts() {
     return (
-      <div>
+      <div className="container">
         <ListItem stories={this.state.stories} showArticle={this.showArticle} />
         {this.renderArticle(this.state.clickedStory)}
       </div>
@@ -54,6 +54,7 @@ class ArticleList extends Component {
   renderArticle(num) {
     return (
       <Article
+        className="main"
         title={this.state.stories[num].title}
         urlToImage={this.state.stories[num].urlToImage}
         description={this.state.stories[num].description}
