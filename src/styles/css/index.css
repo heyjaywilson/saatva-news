@@ -3,10 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif; }
 
+.nav-item {
+  margin: 0.5vh 0;
+  border: black solid 2px;
+  border-radius: 5px; }
+  .nav-item h3 {
+    padding: 1vh 1vw;
+    margin: 0;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    -webkit-text-stroke: 1 black; }
+
 /** FONTS */
 /** SCREEN SIZES */
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Questrial", sans-serif; }
 
 p {
@@ -14,9 +27,9 @@ p {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 0.25fr;
-  grid-template-areas: "s m m m .";
-  grid-column-gap: 5vw; }
+  grid-template-columns: 0.25vw 1fr 1fr 1fr 1fr 0.25vw;
+  grid-template-areas: ". s m m m .";
+  grid-column-gap: 2vw; }
 
 .side {
   grid-area: s; }
@@ -24,6 +37,9 @@ p {
 .main {
   grid-area: m; }
 
+@media screen and (max-device-width: 570px) and (-webkit-min-device-pixel-ratio: 1) {
+  .container {
+    grid-template-areas: ". m m m m ." ". s s s s. "; } }
 section {
   text-align: center; }
 

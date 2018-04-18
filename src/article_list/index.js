@@ -26,16 +26,38 @@ class ArticleList extends Component {
             title: article.title,
             urlToImage: article.urlToImage,
             description: article.description,
-            long_description: article.long_description
+            long_description: article.long_description,
+            active: false
           });
           i = i + 1;
         });
         this.setState({ stories: stories, loading: false });
+        this.makeActive(0);
       });
   }
 
+  noActive() {
+    this.setState(prevState => {
+      prevState.stories[this.state.clickedStory].active = false;
+      return {
+        stories: prevState.stories
+      };
+    });
+  }
+
+  makeActive(id) {
+    this.setState(prevState => {
+      prevState.stories[id].active = true;
+      return {
+        stories: prevState.stories
+      };
+    });
+  }
+
   showArticle(key) {
+    this.noActive();
     this.setState({ clickedStory: key });
+    this.makeActive(key);
   }
 
   renderLoading() {

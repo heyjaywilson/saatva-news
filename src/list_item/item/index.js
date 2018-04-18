@@ -4,31 +4,35 @@ class Item extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isActive: false
+      tempActive: false
     };
-    this.changeActive = this.changeActive.bind(this);
   }
 
-  changeActive() {
-    this.setState({ isActive: true });
-    console.log(this.state.isActive);
-    this.state.isActive
-      ? console.log(this.props.urlToImage)
-      : console.log("no");
+  toggleTemp() {
+    this.setState(prevState => {
+      return { tempActive: !prevState.tempActive };
+    });
   }
 
   render() {
+    const active = {
+      backgroundImage: `url(${this.props.urlToImage})`,
+      color: "rgb(255,255,255)",
+      textShadow:
+        "3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
+    };
     return (
-      <p
-        onClick={() => this.changeActive()}
-        style={{
-          backgroundImage: this.state.isActive
-            ? `url(${this.props.urlToImage})`
-            : ""
+      <h3
+        onMouseEnter={() => {
+          this.toggleTemp();
         }}
+        onMouseOut={() => {
+          this.toggleTemp();
+        }}
+        style={this.props.active || this.state.tempActive ? active : {}}
       >
         {this.props.title}
-      </p>
+      </h3>
     );
   }
 }

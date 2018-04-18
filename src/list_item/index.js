@@ -9,21 +9,37 @@ class ListItem extends Component {
 
   showArticle(key) {
     this.props.showArticle(key);
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
   }
 
   createItems(item) {
     return (
-      <li key={item.id} onClick={() => this.showArticle(item.id)}>
-        <Item title={item.title} urlToImage={item.urlToImage} />
-      </li>
+      <div
+        className="nav-item"
+        key={item.id}
+        onClick={() => this.showArticle(item.id)}
+      >
+        <Item
+          key={item.id}
+          title={item.title}
+          urlToImage={item.urlToImage}
+          active={item.active}
+        />
+      </div>
     );
   }
 
   render() {
     const articles = this.props.stories;
     var listArticles = articles.map(this.createItems);
-    return <ul className="side">{listArticles}</ul>;
+    return <nav className="side">{listArticles}</nav>;
   }
 }
 
 export default ListItem;
+
+/** NOTE:
+ * Add state to make temp active
+ * TempActive -> Item -> Item renders as active when hovered
+ */
