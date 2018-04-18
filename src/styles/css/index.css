@@ -9,6 +9,9 @@ h3 {
 p {
   font-family: "Pragati Narrow", sans-serif; }
 
+h1 {
+  font-size: 2.5em; }
+
 .container {
   display: grid;
   grid-template-columns: 0.25vw 1fr 1fr 1fr 1fr 0.25vw;
