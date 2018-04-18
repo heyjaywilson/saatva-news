@@ -35,6 +35,19 @@ body {
   margin-top: 1vh;
 }
 
+.share {
+  font-size: 2em;
+  margin: 0;
+  text-align: right;
+  a {
+    padding-right: 1vw;
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+}
+
 @media screen and (max-device-width: $small-medium-size) and (-webkit-min-device-pixel-ratio: 1) {
   .header {
     font-size: 2em;
