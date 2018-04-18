@@ -5,7 +5,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>SAATVA NEWS</header>
+        <header className="header">
+          <img
+            src="https://www.saatva.com/images/header-logo.png"
+            alt="saatva logo"
+          />
+          <span>NEWS</span>
+        </header>
         <ArticleList />
       </div>
     );

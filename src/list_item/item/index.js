@@ -16,10 +16,11 @@ class Item extends Component {
 
   render() {
     const active = {
+      backgroundSize: "100%",
       backgroundImage: `url(${this.props.urlToImage})`,
-      color: "rgb(255,255,255)",
+      color: "white",
       textShadow:
-        "3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
+        "2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
     };
     return (
       <h3
